@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.mainscreen.statistic.StatisticFragment"
+    android:background="@drawable/background">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+    //cardview untuk statistik
+
+
+
+
+
+
+
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_gravity="center"
+        >
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:padding="10dp">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Bulan ini"/>
+         <ImageView
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:src="@color/colorMain"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:scaleType="fitXY"
+             android:paddingLeft="5dp"
+             android:paddingRight="5dp"
+             android:paddingBottom="2dp"
+             android:paddingTop="2dp"
+             android:layout_marginTop="10dp"/>
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             >
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Produk Terjual "
+                 android:layout_alignParentStart="true"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="200"
+                 android:layout_alignParentEnd="true"
+                 />
+         </RelativeLayout>
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="5dp"
+             >
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Penghasilan "
+                 android:layout_alignParentStart="true"/>
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_alignParentEnd="true">
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Rp "
+                     />
+                 <TextView
+                     android:id="@+id/textView_penghasilan"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="40.000.000"/>
+
+             </LinearLayout>
+
+         </RelativeLayout>
+         <ImageView
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:src="@color/colorMain"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:scaleType="fitXY"
+             android:paddingLeft="5dp"
+             android:paddingRight="5dp"
+             android:paddingBottom="2dp"
+             android:paddingTop="2dp"
+             android:layout_marginTop="10dp"/>
+
+
+     </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorCardDetailProduct"
+        app:cardCornerRadius="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Produk Terlaris"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/product_terlaris_item"></android.support.v7.widget.RecyclerView>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+
+
+
+</FrameLayout>
