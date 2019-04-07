@@ -10,17 +10,21 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.kulinerinseller.R;
 import com.example.kulinerinseller.features.mainscreen.product.ProductAdapter;
+import com.example.kulinerinseller.features.transactionlist.TransactionList;
 import com.example.kulinerinseller.models.Seller;
 
 import java.util.ArrayList;
 
-public class DetailTransaction extends AppCompatActivity {
+public class DetailTransaction extends AppCompatActivity implements View.OnClickListener {
     public ArrayList<Seller> products = new ArrayList<>();
     public RecyclerView productListRecyclerView;
     public ProductListAdapter adapter;
+    public Button confirmButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,9 @@ public class DetailTransaction extends AppCompatActivity {
         productListRecyclerView.setHasFixedSize(true);
         adapter = new ProductListAdapter(products);
         productListRecyclerView.setAdapter(adapter);
+
+        confirmButton = findViewById(R.id.button_confirm);
+        confirmButton.setOnClickListener(this);
     }
 
     public void hideStatusBar() {
@@ -72,5 +79,15 @@ public class DetailTransaction extends AppCompatActivity {
         products.add(new Seller());
         products.add(new Seller());
         products.add(new Seller());
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.button_confirm) {
+            finish();
+            TransactionList.getInstance().tabLayout.getTabAt(1).select();
+            Toast toast = Toast.makeText(getApplicationContext(),"Transaction Confirmed",Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 }

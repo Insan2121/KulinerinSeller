@@ -2,16 +2,20 @@ package com.example.kulinerinseller.features.mainscreen.account;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.kulinerinseller.MainActivity;
 import com.example.kulinerinseller.R;
 import com.example.kulinerinseller.features.mainscreen.MainScreenActivity;
+import com.example.kulinerinseller.features.transactionlist.TransactionList;
 
 public class AccountFragment extends Fragment {
     String[] menu = {"Edit Profile", "Transaction List", "Reviews", "Logout"};
@@ -38,6 +42,15 @@ public class AccountFragment extends Fragment {
 
         ListView listView = view.findViewById(R.id.list_view_account);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 1) {
+                    Intent intent = new Intent(MainScreenActivity.getInstance(), TransactionList.class);
+                    MainScreenActivity.getInstance().startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override

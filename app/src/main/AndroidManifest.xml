@@ -11,12 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/upup">
+        <activity android:name=".features.transactionlist.TransactionList">
+        </activity>
         <activity android:name=".features.detailtransaction.DetailTransaction">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SellerWelcomeActivity"
@@ -30,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".features.authentication.LoginActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
