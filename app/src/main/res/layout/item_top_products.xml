@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img_tepung"/>
+                    android:src="@drawable/img_gedange_gede"/>
                 <ImageView
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:src="@color/colorMain"

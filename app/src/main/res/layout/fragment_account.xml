@@ -15,7 +15,7 @@
             android:id="@+id/photo_profile"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/telur"
+            android:src="@drawable/img_gedange_gede"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:elevation="0dp"/>
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
-            android:text="Raja Endog"
+            android:text="Gedang Gedhe"
             android:padding="16dp"
             android:gravity="bottom"
             android:layout_gravity="center_horizontal|bottom"

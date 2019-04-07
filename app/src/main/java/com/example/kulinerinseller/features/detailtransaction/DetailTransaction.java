@@ -74,11 +74,6 @@ public class DetailTransaction extends AppCompatActivity implements View.OnClick
         products.add(new Seller());
         products.add(new Seller());
         products.add(new Seller());
-        products.add(new Seller());
-        products.add(new Seller());
-        products.add(new Seller());
-        products.add(new Seller());
-        products.add(new Seller());
     }
 
     @Override

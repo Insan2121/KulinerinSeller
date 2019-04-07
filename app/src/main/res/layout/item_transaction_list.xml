@@ -20,7 +20,7 @@
         android:layout_height="55dp"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:src="@drawable/telur"/>
+        android:src="@drawable/img_gedange_gede"/>
 
     <LinearLayout
         android:id="@+id/ln1"
